@@ -101,7 +101,8 @@ section {
     color: #4a5438;
     padding: 0 20px;
     background-color: transparent; 
-    min-height: 85vh; 
+    min-height: auto;
+    flex:1;
     position: relative;
     z-index: 1;
 }
@@ -176,11 +177,12 @@ section {
 
 .about-container {
     display: flex;
+    flex-direction: row; /* Default: Text sa kaliwa, Image sa kanan */
     justify-content: space-between;
     gap: 40px;
     width: 100%;
     align-items: center;
-}
+}   
 
 .about-text {
     flex: 1.2;
@@ -198,7 +200,8 @@ section {
     font-style: italic;
     border-left: 5px solid #89986d; /* Accent line para bigyang-diin ang greeting text. */
     padding-left: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
+    margin-top: 15px;
 }
 
 .about-image {
@@ -337,7 +340,7 @@ section {
     width: 95%;
     margin: 40px auto 100px; 
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Hahatiin ang row sa apat na pantay na columns sa desktop view. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));/* Hahatiin ang row sa apat na pantay na columns sa desktop view. */
     gap: 35px; 
     padding: 0 20px;
 }
@@ -646,35 +649,112 @@ footer p {
    Layunin: I-adjust ang layout para maging maayos tignan sa Cellphone at Tablets.
 ===================== */
 
-/* LAPTOPS / SMALL SCREENS */
-@media (max-width: 1250px) {
+/* LAPTOPS & SMALL DESKTOPS (1366px and below) */
+@media (max-width: 1366px) {
     .details-container, .gallery-grid {
+        /* FIX: Binabawasan ang columns para hindi mag-overflow sa maliliit na laptop screens */
         grid-template-columns: repeat(2, 1fr); 
+        gap: 25px;
+    }
+}
+
+/* TABLETS (1024px and below) */
+@media (max-width: 1024px) {
+    .about-me {
+        padding: 80px 30px 40px;
+        margin: 80px 20px 40px;
+    }
+    
+    .about-container {
+        /* FIX: 'column-reverse' para mapunta ang image sa itaas at text sa ibaba */
+        flex-direction: column-reverse; 
+        text-align: center;
         gap: 30px;
     }
-}
 
-/* TABLETS */
-@media (max-width: 1100px) {
-    .about-container {
-        flex-direction: column-reverse; /* Pinagpapalit ang posisyon ng image at text sa mobile view. */
-        text-align: center;
-    }
     .about-text {
         max-width: 100%;
+        min-width: unset; /* Tinatanggal ang minimum width para kumasya sa tablet screen */
+    }
+
+    .about-image img {
+        max-width: 350px; /* Nililiitan ang photo para sa tablet view */
+    }
+
+    .details-container, .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* MOBILE PHONES */
+/* MOBILE PHONES (768px and below) */
 @media (max-width: 768px) {
     nav {
-        width: 90%;
+        padding: 10px 20px;
+        width: 95%;
     }
-    .details-container, .gallery-grid {
-        grid-template-columns: 1fr; /* Isang column na lang ang display para sa maliit na screen. */
+
+    nav ul {
+        gap: 15px;
     }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .about-me {
+        border-radius: 30px;
+        margin-top: 60px;
+        padding: 70px 20px 30px;
+    }
+
     .about-me h2 {
-        font-size: 35px;
-        width: 80%;
+        font-size: 28px;
+        padding: 10px 25px;
+        top: -25px;
+        width: auto;
+    }
+
+    .details-container, .gallery-grid {
+        /* FIX: Isang column na lang para hindi putol ang mga cards sa phone */
+        grid-template-columns: 1fr; 
+    }
+
+    .intro-greeting {
+        font-size: 28px;
+        border-left: none;
+        border-bottom: 4px solid #89986d; /* Inililipat ang accent line sa ilalim para sa mobile center align */
+        padding: 0 0 10px 0;
+    }
+}
+
+/* SMALL PHONES (480px and below) */
+@media (max-width: 480px) {
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .about-me h2 {
+        font-size: 22px;
+        padding: 8px 20px;
+    }
+
+    .tech-stack-grid {
+        grid-template-columns: 1fr; /* Ginagawang listahan ang skills para mabasa nang maayos */
+    }
+
+    .quick-info {
+        flex-direction: column; /* Pinagpapatong ang info boxes (age, address, email) */
+    }
+
+    .info-box {
+        width: 100%;
     }
 }
