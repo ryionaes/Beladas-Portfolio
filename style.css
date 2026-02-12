@@ -12,7 +12,10 @@
 
 html {
     height: 100%;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
 }
+ 
 
 body {
     min-height: 100vh;
@@ -39,8 +42,9 @@ nav {
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     
-    width: fit-content;      
-    margin: 20px auto;       
+    width: 90%;
+    max-width: 1200px;      
+    margin: 30px auto;       
     padding: 10px 40px;      
     border-radius: 50px;     /* Ginagawang pill-shaped ang container ng navigation. */
     
@@ -103,6 +107,9 @@ section {
     background-color: transparent; 
     min-height: auto;
     flex:1;
+    max-width: 1200px;
+    max-height: 80vh;
+    margin: 0 auto;
     position: relative;
     z-index: 1;
 }
@@ -813,4 +820,24 @@ footer p {
         font-size: 11px;
         letter-spacing: 0.5px;
     }
+}
+
+/* Chrome, Edge */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(246, 240, 215, 0.3); /* transparent cream */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(137, 152, 109, 0.6); /* semi-transparent matcha */
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a5438;
 }
