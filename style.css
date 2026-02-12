@@ -656,6 +656,11 @@ footer p {
         grid-template-columns: repeat(2, 1fr); 
         gap: 25px;
     }
+
+    footer {
+        padding: 25px 0;
+        font-size: 14px; /* Standard size para sa laptop */
+    }
 }
 
 /* TABLETS (1024px and below) */
@@ -684,77 +689,128 @@ footer p {
     .details-container, .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    footer {
+        padding: 30px 0;
+        font-size: 15px; /* Bahagyang pinalaki para sa tablets */
+    }
 }
 
 /* MOBILE PHONES (768px and below) */
 @media (max-width: 768px) {
     nav {
-        padding: 10px 20px;
-        width: 95%;
+        width: 95% !important; 
+        padding: 18px 20px;    
+        margin: 25px auto;
+        top: 15px;      
     }
 
     nav ul {
         gap: 15px;
+        justify-content: space-evenly; /* Sinisiguradong pantay ang spacing gaya ng About */
     }
 
     nav ul li a {
-        font-size: 14px;
+        font-size: 18px; /* Binabaan konti mula 20px para hindi mag-overlap sa liit ng screen */
+    }
+
+    /* HOME HERO - Itinugma sa laki ng About Header */
+    .hero {
+        padding: 100px 20px; /* Dinagdagan ang space para magmukhang "malaki" */
     }
 
     .hero h2 {
-        font-size: 36px;
+        font-size: 50px; 
+        line-height: 1.1;
+        margin-bottom: 15px;
     }
 
+    .hero p {
+        font-size: 14px; /* Pinalaki para tugma sa About text scaling */
+    }
+
+    /* ABOUT ME BOX - Ang iyong basehan */
     .about-me {
         border-radius: 30px;
         margin-top: 60px;
-        padding: 70px 20px 30px;
+        padding: 80px 25px 40px; /* Dinagdagan konti ang padding para mas 'breathable' */
     }
 
     .about-me h2 {
         font-size: 28px;
-        padding: 10px 25px;
+        padding: 12px 30px;
         top: -25px;
         width: auto;
     }
 
+    /* GALLERY & DETAILS GRID */
     .details-container, .gallery-grid {
-        /* FIX: Isang column na lang para hindi putol ang mga cards sa phone */
         grid-template-columns: 1fr; 
+        gap: 30px; /* Mas malapad na gap para sa malinis na scaling */
     }
 
     .intro-greeting {
         font-size: 28px;
         border-left: none;
-        border-bottom: 4px solid #89986d; /* Inililipat ang accent line sa ilalim para sa mobile center align */
+        border-bottom: 4px solid #89986d; 
         padding: 0 0 10px 0;
+        text-align: center;
+    }
+
+    /* FOOTER MOBILE - Ginawang mas readable */
+    footer {
+        padding: 40px 20px;
+        font-size: 13px; 
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 1.6;
     }
 }
 
 /* SMALL PHONES (480px and below) */
 @media (max-width: 480px) {
+    /* NAVIGATION - Hindi na natin ibabagsak sa 12px para manatiling 'malaki' */
+    nav {
+        padding: 15px 10px;
+    }
+
     nav ul {
-        gap: 10px;
+        gap: 8px;
     }
 
     nav ul li a {
-        font-size: 12px;
+        font-size: 15px; /* Sapat na laki para mabasa pero hindi siksikan */
     }
 
+    /* HOME HERO SMALL */
+    .hero h2 {
+        font-size: 38px; /* Scaling down konti para sa portrait phones */
+    }
+
+    /* ABOUT Header sa Small Phone */
     .about-me h2 {
         font-size: 22px;
-        padding: 8px 20px;
+        padding: 10px 20px;
     }
 
     .tech-stack-grid {
-        grid-template-columns: 1fr; /* Ginagawang listahan ang skills para mabasa nang maayos */
+        grid-template-columns: 1fr; 
     }
 
     .quick-info {
-        flex-direction: column; /* Pinagpapatong ang info boxes (age, address, email) */
+        flex-direction: column;
+        gap: 10px;
     }
 
     .info-box {
         width: 100%;
+        padding: 20px; /* Mas matabang box para sa small screen */
+    }
+
+    /* FOOTER SMALL PHONE - Mas compact pero malinaw */
+    footer {
+        padding: 30px 15px;
+        font-size: 11px;
+        letter-spacing: 0.5px;
     }
 }
