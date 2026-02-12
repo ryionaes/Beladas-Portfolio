@@ -1,175 +1,285 @@
 <!DOCTYPE html>
+<!-- Ipinapakita na HTML5 ang gamit na version -->
+
 <html lang="en">
+<!-- Simula ng HTML document at naka-set sa English ang language -->
+
 <head>
+    <!-- Impormasyon ng website (hindi nakikita sa page) -->
+
     <meta charset="UTF-8">
+    <!-- Para maipakita nang tama ang mga letra at simbolo -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Para maging responsive sa cellphone at tablet -->
+
     <title>About Me | John Harold Beladas</title>
+    <!-- Title na makikita sa browser tab -->
+
     <link rel="stylesheet" href="style.css">
+    <!-- Koneksyon sa external CSS file -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Paghahanda sa koneksyon ng Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Secure na koneksyon para sa fonts -->
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Pagkuha ng Poppins font -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Library para sa icons (Font Awesome) -->
+
     <link rel="icon" type="image/png" href="images/yumi.png">
+    <!-- Icon ng website (favicon) -->
 </head>
+
 <body>
+<!-- Lahat ng makikita sa website -->
 
 <nav>
+<!-- Navigation bar -->
+
     <ul>
+    <!-- Listahan ng menu -->
+
         <li><a href="home.html">Home</a></li>
+        <!-- Link sa Home -->
+
         <li><a href="about.html" class="active">About</a></li>
+        <!-- Link sa About (current page) -->
+
         <li><a href="gallery.html">Gallery</a></li>
+        <!-- Link sa Gallery -->
+
     </ul>
 </nav>
 
 <section id="about" class="about-me">
+<!-- Pangunahing About section -->
+
     <h2>About Me</h2>
+    <!-- Title ng section -->
+
     <div class="about-container">
+    <!-- Lalagyan ng text at image -->
+
         <div class="about-text">
+        <!-- Bahagi ng text -->
+
             <p class="intro-greeting">"Hi, I'm Harold!"</p>
+            <!-- Greeting message -->
 
             <div class="quick-info">
+            <!-- Mabilisang impormasyon -->
+
                 <div class="info-box">
+                <!-- Isang info box -->
+
                     <span class="info-label">Age</span>
+                    <!-- Label ng edad -->
+
                     <span class="info-value">19 Years Old</span>
+                    <!-- Value ng edad -->
+
                 </div>
+
                 <div class="info-box">
                     <span class="info-label">Address</span>
                     <span class="info-value">San Pablo City, Laguna</span>
                 </div>
+
                 <div class="info-box">
                     <span class="info-label">Email</span>
                     <span class="info-value">harrybeladas0@email.com</span>
                 </div>
+
             </div>
             
             <p class="about-bio">
-                I am a BSINFOTECH student at Laguna State Polytechnic University (LSPU) San Pablo City Campus, dedicated to mastering the art of software and web development. 
-                My path started at choosing the ICT strand in STI, where my ICT coursework sparked a deep interest in building applications and web development. 
-                Today, LSPU is providing the technical foundation I need to turn that passion into reality.
+            <!-- Maikling talambuhay -->
+                I am a BSINFOTECH student at Laguna State Polytechnic University (LSPU) San Pablo City Campus, dedicated to mastering the art of software and web development. My path started at choosing the ICT strand in STI, where my ICT coursework sparked a deep interest in building applications and web development. Today, LSPU is providing the technical foundation I need to turn that passion into reality.
             </p>
 
             <div class="social-section">
+            <!-- Section ng social media -->
+
                 <p class="social-label">LET'S CONNECT!</p>
+                <!-- Label -->
+
                 <div class="social-links">
+                <!-- Mga social icons -->
+
                     <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <!-- Facebook -->
+
                     <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <!-- Instagram -->
+
                     <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <!-- GitHub -->
+
                 </div>
             </div>
+
         </div> 
 
         <div class="about-image">
+        <!-- Lalagyan ng larawan -->
+
             <img src="images/me.jpg" alt="My Photo">
+            <!-- Personal photo -->
+
         </div>
+
     </div> 
 </section>
 
 <div class="details-header">
+<!-- Header ng details section -->
+
     <h2>More Details</h2>
     <p>Background, Skills, Hobbies & Goals</p>
+
 </div>
 
 <div class="details-container">
-    
-    
+<!-- Lalagyan ng lahat ng detail cards -->
+
     <div class="detail-card">
+    <!-- Educational background card -->
+
         <h3><i class="fas fa-graduation-cap"></i> Educational Background</h3>
+
         <div class="edu-timeline">
+        <!-- Timeline ng edukasyon -->
+
             <div class="edu-item">
                 <div class="edu-dot"></div>
                 <span class="edu-year">2022 - 2024</span>
                 <p class="edu-school">STI Colleges San Pablo</p>
                 <p class="edu-desc">ICT Strand - Senior High School</p>
             </div>
+
             <div class="edu-item">
                 <div class="edu-dot"></div>
-                 <span class="edu-year">2024 - Present</span>
+                <span class="edu-year">2024 - Present</span>
                 <p class="edu-school">Laguna State Polytechnic University</p>
                 <p class="edu-desc">Bachelor of Science in Information Technology</p>
             </div>
-        </div>
 
-        
+        </div>
     </div>
 
     <div class="detail-card">
-    <h3><i class="fas fa-code"></i> Tech Stack</h3>
-    <div class="tech-stack-grid">
-        <div class="tech-item">
-            <i class="fab fa-html5"></i>
-            <span>HTML5</span>
-        </div>
-        <div class="tech-item">
-            <i class="fab fa-css3-alt"></i>
-            <span>CSS3</span>
-        </div>
-        <div class="tech-item">
-            <i class="fab fa-js"></i>
-            <span>JavaScript</span>
-        </div>
-        <div class="tech-item">
-            <i class="fab fa-java"></i>
-            <span>Java</span>
-        </div>
-        <div class="tech-item">
-            <i class="fas fa-database"></i>
-            <span>SQL</span>
-        </div>
-        <div class="tech-item">
-            <i class="fab fa-figma"></i>
-            <span>Figma</span>
-        </div>
-        <div class="tech-item">
-            <i class="fab fa-git-alt"></i>
-            <span>Git</span>
+    <!-- Tech stack card -->
+
+        <h3><i class="fas fa-code"></i> Tech Stack</h3>
+
+        <div class="tech-stack-grid">
+        <!-- Listahan ng skills -->
+
+            <div class="tech-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fas fa-database"></i>
+                <span>SQL</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fab fa-figma"></i>
+                <span>Figma</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+            </div>
+
         </div>
     </div>
-</div>
 
-   <div class="detail-card">
-    <h3><i class="fas fa-heart"></i> Interests & Hobbies</h3>
-    <div class="hobbies-wrapper">
-        <p class="hobby-header">I enjoy:</p>
-        <div class="hobbies-pill-grid">
-            <div class="hobby-pill">Listening to music</div>
-            <div class="hobby-pill">Writing to loved ones</div>
-            <div class="hobby-pill">Sleeping all day</div>
-            <div class="hobby-pill">Gaming to pass time</div>
-        </div>
+    <div class="detail-card">
+    <!-- Hobbies card -->
 
-        <p class="hobby-header" style="margin-top: 20px;">I'd like to try:</p>
-        <div class="hobbies-pill-grid">
-            <div class="hobby-pill">Travelling abroad</div>
-            <div class="hobby-pill">Trying different cuisines</div>
-            <div class="hobby-pill">Extreme rides</div>
-            <div class="hobby-pill">Diving deeper into IT</div>
-        </div>
-    </div>
-</div>
+        <h3><i class="fas fa-heart"></i> Interests & Hobbies</h3>
 
-<div class="detail-card">
-    <h3><i class="fas fa-rocket"></i> Future Goals</h3>
-    <div class="hobbies-wrapper">
-        <p class="hobby-header">Short Term:</p>
-        <div class="hobbies-pill-grid">
-            <div class="hobby-pill">Improve Designing Creativity</div>
-            <div class="hobby-pill">Figure out my career path</div>
-            <div class="hobby-pill">Learn UI/UX Principles</div>
-        </div>
+        <div class="hobbies-wrapper">
+        <!-- Lalagyan ng hobbies -->
 
-        <p class="hobby-header" style="margin-top: 20px;">Long Term:</p>
-        <div class="hobbies-pill-grid">
-            <div class="hobby-pill">Finish My Degree</div>
-            <div class="hobby-pill">Become a Professional Developer</div>
-            <div class="hobby-pill">Start A Business</div>
+            <p class="hobby-header">I enjoy:</p>
+
+            <div class="hobbies-pill-grid">
+                <div class="hobby-pill">Listening to music</div>
+                <div class="hobby-pill">Writing to loved ones</div>
+                <div class="hobby-pill">Sleeping all day</div>
+                <div class="hobby-pill">Gaming to pass time</div>
+            </div>
+
+            <p class="hobby-header" style="margin-top: 20px;">I'd like to try:</p>
+
+            <div class="hobbies-pill-grid">
+                <div class="hobby-pill">Travelling abroad</div>
+                <div class="hobby-pill">Trying different cuisines</div>
+                <div class="hobby-pill">Extreme rides</div>
+                <div class="hobby-pill">Diving deeper into IT</div>
+            </div>
+
         </div>
     </div>
-</div>
+
+    <div class="detail-card">
+    <!-- Future goals card -->
+
+        <h3><i class="fas fa-rocket"></i> Future Goals</h3>
+
+        <div class="hobbies-wrapper">
+
+            <p class="hobby-header">Short Term:</p>
+
+            <div class="hobbies-pill-grid">
+                <div class="hobby-pill">Improve Designing Creativity</div>
+                <div class="hobby-pill">Figure out my career path</div>
+                <div class="hobby-pill">Learn UI/UX Principles</div>
+            </div>
+
+            <p class="hobby-header" style="margin-top: 20px;">Long Term:</p>
+
+            <div class="hobbies-pill-grid">
+                <div class="hobby-pill">Finish My Degree</div>
+                <div class="hobby-pill">Become a Professional Developer</div>
+                <div class="hobby-pill">Start A Business</div>
+            </div>
+
+        </div>
+    </div>
 
 </div>
 
 <footer>
+<!-- Footer section -->
+
     <p>&copy; 2026 John Harold Beladas. All Rights Reserved.</p>
+
 </footer>
 
 </body>

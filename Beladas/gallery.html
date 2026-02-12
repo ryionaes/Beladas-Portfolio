@@ -1,36 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Gallery | John Harold Beladas</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/yumi.png">
-</head>
-<body>
+<!-- Ipinapakita na HTML5 ang gamit na version -->
 
-   <nav>
+<html lang="en">
+<!-- Simula ng HTML document at naka-set sa English ang language -->
+
+<head>
+    <!-- Impormasyon ng website na hindi nakikita sa page -->
+
+    <meta charset="UTF-8">
+    <!-- Para maipakita nang tama ang mga letra at simbolo -->
+
+    <title>Gallery | John Harold Beladas</title>
+    <!-- Title na makikita sa browser tab -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Koneksyon sa external CSS file -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Paghahanda sa koneksyon ng Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Secure na koneksyon para sa fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Pagkuha ng Poppins font -->
+
+    <link rel="icon" type="image/png" href="images/yumi.png">
+    <!-- Icon ng website (favicon) -->
+</head>
+
+<body>
+<!-- Lahat ng makikita sa website ay nasa loob ng body -->
+
+<nav>
+<!-- Navigation bar o menu -->
+
     <ul>
+    <!-- Listahan ng mga menu -->
+
         <li><a href="home.html">Home</a></li>
+        <!-- Link papunta sa Home page -->
+
         <li><a href="about.html">About</a></li>
+        <!-- Link papunta sa About page -->
+
         <li><a href="gallery.html" class="active">Gallery</a></li>
+        <!-- Link papunta sa Gallery page (kasalukuyang page) -->
+
     </ul>
 </nav>
 
- <section id="gallery" class="gallery-section">
+<section id="gallery" class="gallery-section">
+<!-- Pangunahing section ng Gallery -->
+
     <h2 class="gallery-main-title">My Gallery</h2>
-    
+    <!-- Main title ng gallery -->
+
     <p class="gallery-subtitle">My Recent Projects</p>
+    <!-- Subtitle para sa projects -->
+
     <div class="gallery-grid">
+    <!-- Lalagyan ng mga project images -->
+
         <div class="gallery-item">
+        <!-- Isang project item -->
+
             <img src="images/port1.png">
+            <!-- Larawan ng project -->
+
             <div class="gallery-overlay">
+            <!-- Lumalabas kapag naka-hover -->
+
                 <h3>Portfolio Website</h3>
+                <!-- Pangalan ng project -->
+
                 <p>ITEC 202: A Personal Portfolio Website</p>
+                <!-- Detalye ng project -->
+
             </div>
         </div>
+
         <div class="gallery-item">
             <img src="images/port2.jpg">
             <div class="gallery-overlay">
@@ -38,6 +87,7 @@
                 <p>ITEL 201 & ITEC 204: Fitness App</p>
             </div>
         </div>
+
         <div class="gallery-item">
             <img src="images/port3.png">
             <div class="gallery-overlay">
@@ -45,46 +95,68 @@
                 <p>ITEC 203: Interactive Game Dev</p>
             </div>
         </div>
+
         <div class="gallery-item">
             <img src="images/port4.jpg">
             <div class="gallery-overlay">
                 <h3>Language Frenzy</h3>
-                <p>MOBAPP2: 4 Pics 1 Word Game of Programming</p>
+                <p>MOBAPP1: 4 Pics 1 Word Game of Programming</p>
             </div>
-        </div> </div> <p class="gallery-subtitle" style="margin-top: 60px;">My Achievements</p>
+        </div>
+
+    </div>
+
+    <p class="gallery-subtitle" style="margin-top: 60px;">
+    <!-- Subtitle para sa achievements -->
+    My Achievements
+    </p>
+
     <div class="gallery-grid">
+    <!-- Lalagyan ng achievements -->
+
         <div class="gallery-item">
-            <img src="images/achieve1.png"> 
+            <img src="images/achieve1.png">
             <div class="gallery-overlay">
                 <h3>IBM Certification</h3>
                 <p>Web Development Basics</p>
             </div>
         </div>
+
         <div class="gallery-item">
-            <img src="images/achieve2.png"> 
+            <img src="images/achieve2.png">
             <div class="gallery-overlay">
                 <h3>Cisco Certification</h3>
                 <p>Operating System Basics</p>
             </div>
         </div>
+
         <div class="gallery-item">
-            <img src="images/achieve3.png"> 
+            <img src="images/achieve3.png">
             <div class="gallery-overlay">
                 <h3>Work Immersion</h3>
                 <p>RetinQ Software Solutions</p>
             </div>
         </div>
+
         <div class="gallery-item">
-            <img src="images/achieve4.jpg"> 
+            <img src="images/achieve4.jpg">
             <div class="gallery-overlay">
                 <h3>Academic Excellence</h3>
                 <p>STI San Pablo - 2022-2024</p>
             </div>
-        </div> </div> </section>
+        </div>
 
+    </div>
 
-    <footer>
-        <p>&copy; 2026 John Harold Beladas. All Rights Reserved.</p>
-    </footer>
+</section>
+
+<footer>
+<!-- Footer ng website -->
+
+    <p>&copy; 2026 John Harold Beladas. All Rights Reserved.</p>
+    <!-- Copyright -->
+
+</footer>
+
 </body>
 </html>

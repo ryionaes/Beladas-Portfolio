@@ -1,11 +1,13 @@
 /* =====================
    GLOBAL SETUP
+   Layunin: I-reset ang default styles ng browser para maging consistent ang layout
+   sa lahat ng devices at browsers.
 ===================== */
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Isinasama ang padding at border sa kabuuang sukat ng width at height ng element. */
 }
 
 html {
@@ -15,43 +17,38 @@ html {
 body {
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
-    /* Pinagsamang Polka Dots (Grid) at Matcha Gradient */
+    
+    /* DESIGN: Gumagamit ng radial-gradient para sa polka dot effect at linear-gradient para sa matcha theme colors. */
     background-image: 
         radial-gradient(rgba(74, 84, 56, 0.4) 1.5px, transparent 1.5px), 
         linear-gradient(180deg, #89986d 0%, #F6F0D7 60%, #fdfcf4 100%);
     background-size: 40px 40px, 100% 100%;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Pinananatiling static ang background habang nag-i-scroll ang user. */
     display: flex;
     flex-direction: column;
-    animation: fadeIn 0.8s ease-out;
 }
 
 /* =====================
    NAVIGATION
+   Layunin: Isang floating navigation bar na may modernong glassmorphism effect.
 ===================== */
 
 nav {
-    /* Ginawa nating floating pill shape */
     background: rgba(255, 255, 255, 0.1); 
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px); /* Lumilikha ng frosted glass effect sa background ng menu. */
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     
-    /* Sukat at Position */
-    width: fit-content;      /* Susunod lang ang haba sa dami ng links */
-    margin: 20px auto;       /* I-gitna sa screen at maglagay ng space sa taas */
-    padding: 10px 40px;      /* Saktong luwag sa loob */
-    border-radius: 50px;     /* Eto yung pampabilog */
+    width: fit-content;      
+    margin: 20px auto;       
+    padding: 10px 40px;      
+    border-radius: 50px;     /* Ginagawang pill-shaped ang container ng navigation. */
     
-    /* Para manatiling nakalutang habang nag-i-scroll */
-    position: sticky;
+    position: sticky;        /* Sinisigurado na laging visible ang menu sa itaas habang nag-scroll. */
     top: 20px;
-    z-index: 1000;
+    z-index: 1000;           /* Inilalagay ang menu sa pinaka-ibabaw na layer ng webpage. */
     
-    /* Shadow para lumutang ang glass effect */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    
-    /* I-center ang laman */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,24 +57,23 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* Mas malinis tignan ang gap kaysa margin-left */
+    gap: 30px; /* Nagbibigay ng pantay na espasyo sa pagitan ng mga menu items. */
 }
 
 nav ul li {
-    margin: 0; /* Tinanggal natin yung dating margin para kontrolado ng gap */
+    margin: 0; 
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #4a5438; /* Ginawa nating matcha green para readable sa glass */
+    color: #4a5438; 
     font-weight: 600;
     font-size: 18px;
     position: relative;
     padding: 5px 0;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Smooth transition para sa kulay at effects. */
 }
 
-/* Hover at Active state na babagay sa matcha theme */
 nav ul li a:hover,
 nav ul li a.active {
     color: #89986d;
@@ -89,6 +85,7 @@ nav ul li a::after {
 
 /* =====================
    SECTIONS / HERO
+   Layunin: Ang pangunahing banner ng website na nagpapakilala sa user.
 ===================== */
 
 section {
@@ -103,12 +100,12 @@ section {
     text-align: center;
     color: #4a5438;
     padding: 0 20px;
-    
-    background-color: transparent; /* Tanggalin ang background-image dito */
+    background-color: transparent; 
     min-height: 85vh; 
     position: relative;
     z-index: 1;
 }
+
 .hero h2 {
     font-size: 64px;
     font-weight: 700;
@@ -118,7 +115,7 @@ section {
 }
 
 .hero p {
-    font-size: clamp(18px, 2.5vw, 24px);
+    font-size: clamp(18px, 2.5vw, 24px); /* Automatic na nag-aadjust ang sukat ng font base sa lapad ng screen. */
     letter-spacing: 3px;
     text-transform: uppercase;
     opacity: 0.8;
@@ -141,14 +138,15 @@ section {
 
 .hero button:hover {
     background-color: #89986d;
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Nagbibigay ng "floating" effect kapag itinutok ang mouse. */
     color: #ffffff;
 }
 
-
-/*  =======================
+/* =======================
     ABOUT ME (CORE BOX)
+    Layunin: Isang main container na may glass effect para sa personal na impormasyon.
    ===================== */
+
 .about-me {
     flex: 1;
     background: rgba(255, 255, 255, 0.1);
@@ -165,7 +163,7 @@ section {
     text-align: center;
     font-size: clamp(30px, 5vw, 80px);
     position: absolute;
-    top: -45px;
+    top: -45px; /* Inilalabas ang heading sa itaas na border ng box. */
     left: 50%;
     transform: translateX(-50%);
     background-color: #4a5438;
@@ -198,7 +196,7 @@ section {
     color: #4a5438;
     margin-bottom: 20px;
     font-style: italic;
-    border-left: 5px solid #89986d;
+    border-left: 5px solid #89986d; /* Accent line para bigyang-diin ang greeting text. */
     padding-left: 15px;
     margin-bottom: 10px;
 }
@@ -212,34 +210,37 @@ section {
 
 .about-image img {
     width: 100%;
-    max-width: 450px; /* In-adjust ko para saktong size sa grid */
+    max-width: 450px; 
     height: auto;
     border-radius: 30px;
     object-fit: cover;
-    box-shadow: 15px 15px 0px #89986d; /* Retained: Your signature shadow */
+    box-shadow: 15px 15px 0px #89986d; /* Offset shadow style para sa profile picture. */
 }
+
 /* =====================
-    QUICK INFO: OPTION 2 (WRAPPING FIX)
+    QUICK INFO
+    Layunin: I-display ang mga basic contact details sa maliliit na cards.
    ===================== */
+
 .quick-info {
     display: flex;
     gap: 15px;
     margin: 25px 0;
-    flex-wrap: wrap; /* Papayagang bumaba ang boxes pag hindi na kasya sa isang row */
+    flex-wrap: wrap; /* Pinapahintulutan ang cards na bumaba sa next line kapag maliit ang screen size. */
     width: 100%;
 }
 
 .info-box {
     flex: 1;
     background: rgba(137, 152, 109, 0.15);
-    padding: 15px 10px; /* Saktong padding para sa mobile */
+    padding: 15px 10px; 
     border-radius: 15px;
     color: #4a5438;
     font-weight: 200;
     font-size: 14px;
     text-align: center;
     border-left: 4px solid #89986d;
-    min-width: 160px; /* Minimum na lapad para hindi masyadong puyat ang cards */
+    min-width: 160px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -256,20 +257,21 @@ section {
 }
 
 .info-value {
-    font-size: 15px; /* Bahagyang liliitan para mas kumasya ang email */
+    font-size: 15px; 
     font-weight: 600;
     color: #4a5438;
     display: block;
     margin-top: 5px;
     line-height: 1.3;
-    /* ETO ANG MAGIC: */
-    word-break: break-all; /* Puputulin ang mahabang text (email) para sumunod sa lapad ng box */
-    white-space: normal;   /* Papayagan ang pagbaba sa next line */
+    word-break: break-all; /* Sinisigurado na hindi lalampas ang mahahabang text (gaya ng email) sa container. */
+    white-space: normal;   
 }
 
 /* =====================
     SOCIAL LINKS
+    Layunin: Styling para sa mga icon links patungo sa social media accounts.
    ===================== */
+
 .social-section {
     margin-top: 40px;
 }
@@ -311,12 +313,13 @@ section {
 }
 
 /* =====================
-    DETAILS CONTAINER (FIXED SPLIT)
+    DETAILS CONTAINER
+    Layunin: Isang grid system para sa Education, Tech Stack, at Hobbies.
    ===================== */
 
-   .details-header {
+.details-header {
     text-align: center;
-    margin: 80px auto 40px; /* Space sa taas at baba */
+    margin: 80px auto 40px; 
     max-width: 1400px;
     width: 95%;
 }
@@ -328,21 +331,19 @@ section {
     letter-spacing: -1px;
     font-weight: 700;
 }
+
 .details-container {
-    /* Mula 1300px, gawin nating 1600px o 95% para mas maluwag */
     max-width: 2000px; 
     width: 95%;
     margin: 40px auto 100px; 
     display: grid;
-    /* Panatilihin ang 4 columns para sa PC */
-    grid-template-columns: repeat(4, 1fr); 
-    /* Dagdagan ang gap sa pagitan ng boxes */
+    grid-template-columns: repeat(4, 1fr); /* Hahatiin ang row sa apat na pantay na columns sa desktop view. */
     gap: 35px; 
     padding: 0 20px;
 }
 
 .detail-card {
-    background: rgba(255, 255, 255, 0.1); /* Glass Effect */
+    background: rgba(255, 255, 255, 0.1); 
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -365,7 +366,9 @@ section {
 
 /* =====================
     EDUCATION: HORIZONTAL TIMELINE
+    Layunin: Visual timeline representation ng educational background.
    ===================== */
+
 .edu-timeline {
     display: flex;
     flex-direction: row;
@@ -377,7 +380,7 @@ section {
 .edu-timeline::before {
     content: '';
     position: absolute;
-    top: 25px; /* Tumatama sa gitna ng dot */
+    top: 25px; 
     left: 0;
     width: 100%;
     height: 2px;
@@ -396,7 +399,7 @@ section {
     width: 20px;
     height: 20px;
     background: #4a5438;
-    border: 4px solid #F6F0D7; /* Hollow effect sa ibabaw ng line */
+    border: 4px solid #F6F0D7; 
     border-radius: 50%;
     margin-bottom: 15px;
 }
@@ -421,18 +424,18 @@ section {
 }
 
 /* =====================
-    TECH STACK: GLASSY PILLS (FINAL FIX)
+    TECH STACK
+    Layunin: I-display ang technical skills gamit ang interactive pills.
    ===================== */
+
 .tech-stack-grid {
     display: grid;
-    /* Gagawa ng 2 columns para magmukhang pills */
     grid-template-columns: repeat(2, 1fr); 
     gap: 12px;
     margin-top: 15px;
 }
 
 .tech-item {
-    /* Glassy background mula sa reference image mo */
     background: rgba(137, 152, 109, 0.15); 
     border: 1px solid rgba(137, 152, 109, 0.2);
     border-radius: 12px;
@@ -444,10 +447,9 @@ section {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* HOVER EFFECT: Nataas (Image 1 goal) at nagiging green (Image 2 goal) */
 .tech-item:hover {
-    background: #4a5438; /* Solid Matcha Green */
-    transform: translateY(-5px); /* Angat effect */
+    background: #4a5438; 
+    transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(74, 84, 56, 0.2);
 }
 
@@ -466,15 +468,16 @@ section {
     transition: color 0.3s ease;
 }
 
-/* Kapag naka-hover, magiging cream ang text at icon para mabasa sa green background */
 .tech-item:hover i,
 .tech-item:hover span {
     color: #F6F0D7;
 }
 
 /* =====================
-    HOBBIES: GLASSY PILLS
+    HOBBIES
+    Layunin: Small decorative pills para sa mga hilig o interes.
    ===================== */
+
 .hobby-header {
     font-size: 14px;
     font-weight: 700;
@@ -500,10 +503,8 @@ section {
     font-weight: 600;
     color: #4a5438;
     transition: all 0.3s ease;
-    cursor: default;
 }
 
-/* Hover effect: Nataas din at nag-ge-green gaya ng tech stack */
 .hobby-pill:hover {
     background: #4a5438;
     color: #F6F0D7;
@@ -511,14 +512,14 @@ section {
     box-shadow: 0 5px 15px rgba(74, 84, 56, 0.2);
 }
 
-
-
 /* =====================
-    GALLERY SECTION (CLEAN VERSION)
+    GALLERY SECTION
+    Layunin: Grid display para sa mga artworks o projects na may hover animation.
    ===================== */
+
 .gallery-section {
     padding: 80px 20px;
-    max-width: 2000px; /* Pantay sa details-container para sa malapad na screen */
+    max-width: 2000px; 
     width: 95%;        
     margin: 0 auto;
     text-align: center;
@@ -527,7 +528,7 @@ section {
 .gallery-main-title {
     font-size: clamp(30px, 5vw, 70px);
     color: #4a5438;
-    margin-bottom: 20px; /* Binawasan para hindi masyadong malayo sa subtitle */
+    margin-bottom: 20px; 
     font-weight: 700;
 }
 
@@ -544,23 +545,21 @@ section {
 
 .gallery-grid {
     display: grid;
-    /* Isang deklara lang: 4 columns para sa PC */
     grid-template-columns: repeat(4, 1fr); 
-    gap: 35px; /* Ginawa nating 35px para talagang maluwag at breathable */
-    padding: 20px 0 60px; /* May space sa ilalim bago ang susunod na section */
+    gap: 35px; 
+    padding: 20px 0 60px; 
 }
 
-/* Individual Gallery Card */
 .gallery-item {
     position: relative;
     border-radius: 30px;
-    overflow: hidden; 
+    overflow: hidden; /* Itinatago ang lumalampas na pixels ng imahe kapag nag-zoom. */
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    aspect-ratio: 4/3; /* Pantay-pantay na size ng boxes */
+    aspect-ratio: 4/3; 
 }
 
 .gallery-item:hover {
@@ -576,17 +575,15 @@ section {
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1); /* Banayad na zoom */
+    transform: scale(1.1); /* Lumilikha ng zoom-in effect sa imahe kapag hover. */
 }
 
-/* Modified Hover Overlay */
 .gallery-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Matcha gradient overlay */
     background: linear-gradient(to top, rgba(74, 84, 56, 0.9) 0%, transparent 100%);
     display: flex;
     flex-direction: column;
@@ -599,7 +596,7 @@ section {
 }
 
 .gallery-item:hover .gallery-overlay {
-    opacity: 1; 
+    opacity: 1; /* Ipinapakita ang description ng project kapag hover. */
 }
 
 .gallery-overlay h3 {
@@ -614,7 +611,7 @@ section {
     font-size: 14px;
     opacity: 0.8;
     transform: translateY(20px);
-    transition: transform 0.4s ease 0.1s; /* May konting delay sa title */
+    transition: transform 0.4s ease 0.1s; 
 }
 
 .gallery-item:hover .gallery-overlay h3,
@@ -622,20 +619,9 @@ section {
     transform: translateY(0);
 }
 
-.gallery-subtitle {
-    display: inline-block;
-    color: #4a5438;
-    padding: 10px 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 50px;
-    margin-top: 10px; /* Eto na yung space mo */
-    margin-bottom: 40px;
-}
-
-
 /* =====================
    FOOTER
+   Layunin: Copyright information at bottom spacing ng page.
 ===================== */
 
 footer {
@@ -653,131 +639,42 @@ footer p {
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
-    
 }
-
 
 /* =====================
-   RESPONSIVE MASTER FIX (4-COLUMN + GALLERY)
+   RESPONSIVE DESIGN (Media Queries)
+   Layunin: I-adjust ang layout para maging maayos tignan sa Cellphone at Tablets.
 ===================== */
 
-/* --- LARGE TABLETS / SMALL LAPTOPS (1250px and below) --- */
+/* LAPTOPS / SMALL SCREENS */
 @media (max-width: 1250px) {
-    .details-container {
+    .details-container, .gallery-grid {
         grid-template-columns: repeat(2, 1fr); 
         gap: 30px;
-        padding: 0 40px;
-    }
-
-    /* Gallery: Gawing 2 columns muna sa malaking tablet */
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* --- TABLETS (1100px and below) --- */
+/* TABLETS */
 @media (max-width: 1100px) {
-    .about-me {
-        margin: 80px 20px 40px;
-        padding: 80px 30px 40px;
-    }
-
     .about-container {
-        flex-direction: column-reverse;
+        flex-direction: column-reverse; /* Pinagpapalit ang posisyon ng image at text sa mobile view. */
         text-align: center;
-        gap: 30px;
     }
-
     .about-text {
         max-width: 100%;
-        font-size: 18px;
-    }
-
-    .intro-greeting {
-        font-size: 28px;
-        border-left: none;
-        border-bottom: 4px solid #89986d;
-        padding: 0 0 10px 0;
-        display: inline-block;
-    }
-
-    .gallery-section {
-        padding: 40px 20px;
     }
 }
 
-/* --- MOBILE PHONES (768px and below) --- */
+/* MOBILE PHONES */
 @media (max-width: 768px) {
     nav {
-        padding: 10px 20px;
         width: 90%;
     }
-
-    nav ul {
-        gap: 15px;
+    .details-container, .gallery-grid {
+        grid-template-columns: 1fr; /* Isang column na lang ang display para sa maliit na screen. */
     }
-
-    nav ul li a {
-        font-size: 14px;
-    }
-
     .about-me h2 {
         font-size: 35px;
-        padding: 10px 30px;
         width: 80%;
-        top: -30px;
-    }
-
-    .quick-info {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
-    }
-
-    .info-box {
-        width: 100%;
-        min-width: unset;
-        flex: none;
-    }
-
-    .details-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 0 20px;
-    }
-
-    /* Gallery Mobile Fix */
-    .gallery-grid {
-        grid-template-columns: 1fr; /* Isang column na lang para hindi maliit ang images */
-        gap: 20px;
-    }
-
-    .gallery-main-title {
-        font-size: 40px;
-        margin-bottom: 40px;
-    }
-
-    .gallery-item {
-        aspect-ratio: 1/1; /* Square look para sa mobile */
-    }
-
-    .tech-stack-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .details-header h2 {
-        font-size: 30px;
-    }
-}
-
-/* --- VERY SMALL PHONES (400px and below) --- */
-@media (max-width: 400px) {
-    .tech-stack-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .social-links {
-        justify-content: center;
     }
 }
