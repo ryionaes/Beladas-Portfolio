@@ -629,6 +629,55 @@ section {
     transform: translateY(0);
 }
 
+
+
+/* Gallery Overlay Text Animation */
+.gallery-item:hover .gallery-overlay h3,
+.gallery-item:hover .gallery-overlay p {
+    transform: translateY(0);
+}
+
+/* =====================
+   TECH ICONS SA GALLERY OVERLAY
+   Layunin: I-display ang tech icons sa ibaba ng project description sa hover.
+===================== */
+
+.project-tech {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.2s; /* Lalabas pagkatapos ng text */
+}
+
+.gallery-item:hover .project-tech {
+    transform: translateY(0);
+}
+
+.project-tech i, .project-tech span {
+    font-size: 18px;
+    color: #F6F0D7;
+    background: rgba(255, 255, 255, 0.2);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Custom styling para sa mga walang icon sa FontAwesome */
+.csharp-icon, .cplus-icon {
+    font-size: 12px !important;
+}
+
+.project-tech i:hover {
+    background: #89986d;
+    transform: scale(1.1);
+}
+
 /* =====================
    FOOTER
    Layunin: Copyright information at bottom spacing ng page.
@@ -641,6 +690,7 @@ footer {
     background-color: transparent;
     margin-top: auto;
 }
+
 
 footer p {
     font-size: 12px;

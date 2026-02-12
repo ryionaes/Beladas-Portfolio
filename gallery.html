@@ -25,6 +25,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <!-- Pagkuha ng Poppins font -->
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Library para sa icons (Font Awesome) -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Library para sa icons (Devicons) -->
+
     <link rel="icon" type="image/png" href="images/yumi.png">
     <!-- Icon ng website (favicon) -->
 
@@ -54,7 +60,7 @@
 </nav>
 
 <section id="gallery" class="gallery-section">
-<!-- Pangunahing section ng Gallery -->
+    <!-- Pangunahing section ng Gallery -->
 
     <h2 class="gallery-main-title">My Gallery</h2>
     <!-- Main title ng gallery -->
@@ -63,62 +69,80 @@
     <!-- Subtitle para sa projects -->
 
     <div class="gallery-grid">
-    <!-- Lalagyan ng mga project images -->
+        <!-- Lalagyan ng mga project images -->
 
         <div class="gallery-item">
-        <!-- Isang project item -->
-
-            <img src="images/port1.png">
+            <!-- Isang project item -->
+            <img src="images/port1.png" alt="Portfolio Website">
             <!-- Larawan ng project -->
 
             <div class="gallery-overlay">
-            <!-- Lumalabas kapag naka-hover -->
-
+                <!-- Lumalabas kapag naka-hover -->
                 <h3>Portfolio Website</h3>
                 <!-- Pangalan ng project -->
-
                 <p>ITEC 202: A Personal Portfolio Website</p>
                 <!-- Detalye ng project -->
 
+                <div class="project-tech">
+                    <!-- Teknolohiya na ginamit sa project -->
+                    <i class="devicon-typescript-plain" title="TypeScript"></i>
+    <i class="fab fa-react" title="React"></i>
+    <i class="devicon-nextjs-plain" title="Next.js"></i>
+    <i class="devicon-tailwindcss-plain" title="Tailwind CSS"></i>
+                </div>
             </div>
         </div>
 
         <div class="gallery-item">
-            <img src="images/port2.jpg">
+            <img src="images/port2.jpg" alt="PathFitX">
             <div class="gallery-overlay">
                 <h3>PathFitX</h3>
                 <p>ITEL 201 & ITEC 204: Fitness App</p>
+                <div class="project-tech">
+<i class="devicon-java-plain" title="Java"></i>
+            <i class="fab fa-android" title="Android"></i>
+            <i class="fas fa-fire" title="Firebase"></i>
+                </div>
             </div>
         </div>
 
         <div class="gallery-item">
-            <img src="images/port3.png">
+            <img src="images/port3.png" alt="Whack-A-Saurus!">
             <div class="gallery-overlay">
                 <h3>Whack-A-Saurus!</h3>
                 <p>ITEC 203: Dinosaur Themed Whack-a-Mole Game</p>
+                <div class="project-tech">
+                   <i class="devicon-csharp-plain" title="C#"></i>
+            <i class="fab fa-windows" title="Windows Forms"></i>
+                </div>
             </div>
         </div>
 
         <div class="gallery-item">
-            <img src="images/port4.jpg">
+            <img src="images/port4.jpg" alt="Language Frenzy">
             <div class="gallery-overlay">
                 <h3>Language Frenzy</h3>
-                <p>MOBAPP1: 4 Pics 1 Word Game of Programming</p>
+                <p>MOBAPP1: 4 Pics 1 Word Game</p>
+                <div class="project-tech">
+                    <i class="devicon-java-plain" title="Java"></i>
+                    <i class="fab fa-android" title="Android"></i>
+                </div>
             </div>
         </div>
 
     </div>
+    <!-- End ng gallery-grid -->
 
+</section>
+<!-- End ng gallery section -->
+<section class="achievements-section gallery-section">
     <p class="gallery-subtitle" style="margin-top: 60px;">
-    <!-- Subtitle para sa achievements -->
-    My Achievements
+        My Achievements
     </p>
 
     <div class="gallery-grid">
-    <!-- Lalagyan ng achievements -->
-
         <div class="gallery-item">
-            <img src="images/achieve1.png">
+            <img src="images/achieve1.png" alt="IBM Certification">
             <div class="gallery-overlay">
                 <h3>IBM Certification</h3>
                 <p>Web Development Basics</p>
@@ -126,7 +150,7 @@
         </div>
 
         <div class="gallery-item">
-            <img src="images/achieve2.png">
+            <img src="images/achieve2.png" alt="Cisco Certification">
             <div class="gallery-overlay">
                 <h3>Cisco Certification</h3>
                 <p>Operating System Basics</p>
@@ -134,7 +158,7 @@
         </div>
 
         <div class="gallery-item">
-            <img src="images/achieve3.png">
+            <img src="images/achieve3.png" alt="Work Immersion">
             <div class="gallery-overlay">
                 <h3>Work Immersion</h3>
                 <p>RetinQ Software Solutions</p>
@@ -142,16 +166,16 @@
         </div>
 
         <div class="gallery-item">
-            <img src="images/achieve4.jpg">
+            <img src="images/achieve4.jpg" alt="Academic Excellence">
             <div class="gallery-overlay">
                 <h3>Academic Excellence</h3>
                 <p>STI San Pablo - 2022-2024</p>
             </div>
         </div>
-
     </div>
-
 </section>
+<!-- End ng achievements section -->
+
 
 <footer>
 <!-- Footer ng website -->
